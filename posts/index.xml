@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>所有文章 - Richard&#39;s Blog</title>
+        <link>http://bloglite.zekun.fun/posts/</link>
+        <description>所有文章 | Richard&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43;面向对象：入门</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/754/</link>
+    <pubDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/754/</guid>
+    <description><![CDATA[题目 设计一个类complex，对复数进行输出。其中有两个数据成员realPart和imagePart分别表示复数的实部和虚部；提供一个成员函]]></description>
+</item><item>
+    <title>计数问题[NOIP2013普及组]</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/748/</link>
+    <pubDate>Thu, 01 Apr 2021 00:57:49 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/748/</guid>
+    <description><![CDATA[题目描述 试计算在区间 11 到 nn的所有整数中，数字x(0 ≤ x ≤ 9)共出现了多少次？例如，在 1到11中，即在 1,2,3,4,5,6,7,8,9,10,11 中，数字 1 出现了 4 次。 输入格式 2个整]]></description>
+</item><item>
+    <title>铺地毯[NOIP2011提高组]</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/739/</link>
+    <pubDate>Wed, 17 Mar 2021 12:28:50 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/739/</guid>
+    <description><![CDATA[题目描述 为了准备一个独特的颁奖典礼，组织者在会场的一片矩形区域（可看做是平面直角坐标系的第一象限）铺上一些矩形地毯。一共有 nn 张地毯，编号从 11]]></description>
+</item><item>
+    <title>常用端口总结</title>
+    <link>http://bloglite.zekun.fun/2021/%E9%9A%8F%E7%AC%94/735/</link>
+    <pubDate>Tue, 16 Mar 2021 12:49:02 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E9%9A%8F%E7%AC%94/735/</guid>
+    <description><![CDATA[摘编自CSDN /***\*简易版**********/ 21端口ftp：21端口主要用于ftp（file transfer protocol，文件传输协议）服务]]></description>
+</item><item>
+    <title>陶陶摘苹果[NOIP2005]</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/730/</link>
+    <pubDate>Sun, 14 Mar 2021 12:03:59 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/730/</guid>
+    <description><![CDATA[题目描述 陶陶家的院子里有一棵苹果树，每到秋天树上就会结出 101 个苹果。苹果成熟的时候，陶陶就会跑去摘苹果。陶陶有个 303 厘米高的板凳，当她不能直接用]]></description>
+</item><item>
+    <title>IPFS新手指北</title>
+    <link>http://bloglite.zekun.fun/2021/uncategorized/696/</link>
+    <pubDate>Sat, 30 Jan 2021 04:20:31 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/uncategorized/696/</guid>
+    <description><![CDATA[转载自zu1k–IPFS新手指北 IPFS新手指北 IPFS简介 IPFS全称InterPlanetary File System，中文名叫星际文件系统，听]]></description>
+</item><item>
+    <title>区间质数统计（加强版）</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/663/</link>
+    <pubDate>Sat, 09 Jan 2021 07:19:36 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/663/</guid>
+    <description><![CDATA[题目描述 给定区间[L,R]"[L,R] ， 请计算区间中素数的个数。 其中2&#x2264;L&#x2264;R&#x2264;2&#x00D7;]]></description>
+</item><item>
+    <title>First Blood</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/661/</link>
+    <pubDate>Sat, 09 Jan 2021 07:17:45 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/661/</guid>
+    <description><![CDATA[题目描述 盖伦是个小学一年级的学生，在一次数学课的时候，老师给他们出了一个难题： 老师给了一个正整数 n，需要在不大于n的范围内选择三个正整数(可]]></description>
+</item><item>
+    <title>Easy Fibonacci</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/</link>
+    <pubDate>Sat, 09 Jan 2021 07:16:33 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/</guid>
+    <description><![CDATA[题目描述 定义f0=0"f=,f1=1"f1=1 对于n&gt;=2"n=2定义 fn=(fn&#x2212;1+fn&#x2212;2)mod1]]></description>
+</item><item>
+    <title>分数化小数</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/657/</link>
+    <pubDate>Sat, 09 Jan 2021 07:14:38 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/657/</guid>
+    <description><![CDATA[题目描述 输入正整数a"a,b"b,c"c 其中1&#x2264;a,b&#x003C;106"1≤a,b106，c&#x2264;100"c≤]]></description>
+</item></channel>
+</rss>

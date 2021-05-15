@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>面向对象 - 标签 - Richard&#39;s Blog</title>
+        <link>http://bloglite.zekun.fun/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+        <description>面向对象 - 标签 - Richard&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" rel="self" type="application/rss+xml" /><item>
+    <title>C&#43;&#43;面向对象：入门</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/754/</link>
+    <pubDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/754/</guid>
+    <description><![CDATA[题目 设计一个类complex，对复数进行输出。其中有两个数据成员realPart和imagePart分别表示复数的实部和虚部；提供一个成员函]]></description>
+</item></channel>
+</rss>

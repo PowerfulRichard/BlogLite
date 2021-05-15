@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>贪心 - 标签 - Richard&#39;s Blog</title>
+        <link>http://bloglite.zekun.fun/tags/%E8%B4%AA%E5%BF%83/</link>
+        <description>贪心 - 标签 - Richard&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Fri, 08 Jan 2021 16:58:36 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/tags/%E8%B4%AA%E5%BF%83/" rel="self" type="application/rss+xml" /><item>
+    <title>阶乘之和</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/628/</link>
+    <pubDate>Fri, 08 Jan 2021 16:58:36 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/628/</guid>
+    <description><![CDATA[题目描述 给你一个非负数整数n，判断n是不是一些数（这些数不允许重复使用，且为正数）的阶乘之和，如9=1！+2!+3!，如果是，则输出Yes，]]></description>
+</item></channel>
+</rss>

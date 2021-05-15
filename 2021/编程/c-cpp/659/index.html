@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Easy Fibonacci - Richard&#39;s Blog</title><meta name="Description" content="Richard&#39;s Blog 极速版"><meta property="og:title" content="Easy Fibonacci" />
+<meta property="og:description" content="题目描述 定义f0=0&#34;f=,f1=1&#34;f1=1 对于n&gt;=2&#34;n=2定义 fn=(fn&#x2212;1&#43;fn&#x2212;2)mod1" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/" /><meta property="og:image" content="http://bloglite.zekun.fun/images/avatar.gif"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-09T07:16:33&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-09T07:16:33&#43;00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://bloglite.zekun.fun/images/avatar.gif"/>
+
+<meta name="twitter:title" content="Easy Fibonacci"/>
+<meta name="twitter:description" content="题目描述 定义f0=0&#34;f=,f1=1&#34;f1=1 对于n&gt;=2&#34;n=2定义 fn=(fn&#x2212;1&#43;fn&#x2212;2)mod1"/>
+<meta name="application-name" content="Richard&#39;s Blog Lite 移动端">
+<meta name="apple-mobile-web-app-title" content="Richard&#39;s Blog Lite 移动端"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/" /><link rel="prev" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/657/" /><link rel="next" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/661/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Easy Fibonacci",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/bloglite.zekun.fun\/2021\/%E7%BC%96%E7%A8%8B\/c-cpp\/659\/"
+        },"genre": "post","keywords": "acm, C\/C\u002b\u002b, 动态规划, 编程","wordcount":  225 ,
+        "url": "http:\/\/bloglite.zekun.fun\/2021\/%E7%BC%96%E7%A8%8B\/c-cpp\/659\/","datePublished": "2021-01-09T07:16:33+00:00","dateModified": "2021-01-09T07:16:33+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Richard"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Richard&#39;s Blog"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Richard&#39;s Blog"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">Easy Fibonacci</h1><div class="content" id="content"><h2 class="page-header text-muted" id="题目描述">题目描述</h2>
+<div class="content">
+  <p>
+    定义<span id="MathJax-Element-6-Frame" class="MathJax" style="box-sizing: border-box; font-size: 14px; display: inline; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>f</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></math>"><span id="MathJax-Span-17" class="math"><span id="MathJax-Span-18" class="mrow"><span id="MathJax-Span-19" class="msubsup"><span id="MathJax-Span-20" class="mi">f</span><span id="MathJax-Span-21" class="mn"></span></span><span id="MathJax-Span-22" class="mo">=</span><span id="MathJax-Span-23" class="mn"></span></span></span></span>,<span id="MathJax-Element-7-Frame" class="MathJax" style="box-sizing: border-box; font-size: 14px; display: inline; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>f</mi><mn>1</mn></msub><mo>=</mo><mn>1</mn></math>"><span id="MathJax-Span-24" class="math"><span id="MathJax-Span-25" class="mrow"><span id="MathJax-Span-26" class="msubsup"><span id="MathJax-Span-27" class="mi">f</span><span id="MathJax-Span-28" class="mn">1</span></span><span id="MathJax-Span-29" class="mo">=</span><span id="MathJax-Span-30" class="mn">1</span></span></span></span>
+  </p>
+  <p>
+    对于<span id="MathJax-Element-8-Frame" class="MathJax" style="box-sizing: border-box; font-size: 14px; display: inline; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>n</mi><mo>&gt;=</mo><mn>2</mn></math>"><span id="MathJax-Span-31" class="math"><span id="MathJax-Span-32" class="mrow"><span id="MathJax-Span-33" class="mi">n</span><span id="MathJax-Span-34" class="mo">>=</span><span id="MathJax-Span-35" class="mn">2</span></span></span></span>定义
+  </p>
+  <div class="MathJax_Display">
+    <span id="MathJax-Element-9-Frame" class="MathJax" style="box-sizing: border-box; font-size: 15px; display: inline; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; text-align: center; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot; display=&quot;block&quot;><msub><mi>f</mi><mi>n</mi></msub><mo>=</mo><mo stretchy=&quot;false&quot;>(</mo><msub><mi>f</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>n</mi><mo>&#x2212;</mo><mn>1</mn></mrow></msub><mo>+</mo><msub><mi>f</mi><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mi>n</mi><mo>&#x2212;</mo><mn>2</mn></mrow></msub><mo stretchy=&quot;false&quot;>)</mo><mspace width=&quot;1em&quot; /><mi>mod</mi><mspace width=&quot;thinmathspace&quot; /><mspace width=&quot;thinmathspace&quot; /><mn>10</mn></math>"><span id="MathJax-Span-36" class="math"><span id="MathJax-Span-37" class="mrow"><span id="MathJax-Span-38" class="msubsup"><span id="MathJax-Span-39" class="mi">f</span><span id="MathJax-Span-40" class="mi">n</span></span><span id="MathJax-Span-41" class="mo">=</span><span id="MathJax-Span-42" class="mo">(</span><span id="MathJax-Span-43" class="msubsup"><span id="MathJax-Span-44" class="mi">f</span><span id="MathJax-Span-45" class="texatom"><span id="MathJax-Span-46" class="mrow"><span id="MathJax-Span-47" class="mi">n</span><span id="MathJax-Span-48" class="mo">−</span><span id="MathJax-Span-49" class="mn">1</span></span></span></span><span id="MathJax-Span-50" class="mo">+</span><span id="MathJax-Span-51" class="msubsup"><span id="MathJax-Span-52" class="mi">f</span><span id="MathJax-Span-53" class="texatom"><span id="MathJax-Span-54" class="mrow"><span id="MathJax-Span-55" class="mi">n</span><span id="MathJax-Span-56" class="mo">−</span><span id="MathJax-Span-57" class="mn">2</span></span></span></span><span id="MathJax-Span-58" class="mo">)</span><span id="MathJax-Span-59" class="TeXmathchoice"><span id="MathJax-Span-60" class="mspace"></span></span><span id="MathJax-Span-61" class="mi">mod</span><span id="MathJax-Span-62" class="mspace"></span><span id="MathJax-Span-63" class="mspace"></span><span id="MathJax-Span-64" class="mn">10</span></span></span></span>
+  </div>
+</div>
+<h2 class="page-header text-muted" id="输入">输入</h2>
+<div class="content">
+  <span id="MathJax-Element-10-Frame" class="MathJax" style="box-sizing: border-box; font-size: 14px; display: inline; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mn>0</mn><mo>&#x2264;</mo><mi>k</mi><mo>&#x2264;</mo><msup><mn>10</mn><mrow class=&quot;MJX-TeXAtom-ORD&quot;><mn>18</mn></mrow></msup></math>"><span id="MathJax-Span-65" class="math"><span id="MathJax-Span-66" class="mrow"><span id="MathJax-Span-67" class="mn"></span><span id="MathJax-Span-68" class="mo">≤</span><span id="MathJax-Span-69" class="mi">k</span><span id="MathJax-Span-70" class="mo">≤</span><span id="MathJax-Span-71" class="msubsup"><span id="MathJax-Span-72" class="mn">10</span><span id="MathJax-Span-73" class="texatom"><span id="MathJax-Span-74" class="mrow"><span id="MathJax-Span-75" class="mn">18</span></span></span></span></span></span></span>
+</div>
+<h2 class="page-header text-muted" id="输出">输出</h2>
+<div class="content">
+  <span class="md-expand">计算<span id="MathJax-Element-11-Frame" class="MathJax" style="box-sizing: border-box; font-size: 15px; display: inline; font-style: normal; font-weight: normal; line-height: normal; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; position: relative;" tabindex="0" role="presentation" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msub><mi>f</mi><mi>k</mi></msub></math>"><span id="MathJax-Span-76" class="math"><span id="MathJax-Span-77" class="mrow"><span id="MathJax-Span-78" class="msubsup"><span id="MathJax-Span-79" class="mi">f</span><span id="MathJax-Span-80" class="mi">k</span></span></span></span></span></span>
+</div>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include&lt;bits/stdc++.h&gt;
+using namespace std;
+int a(long long n) {
+    int arr[60] = { 0, 1, 1, 2, 3, 5, 8, 3, 1, 4,
+                   5, 9, 4, 3, 7, 0, 7, 7, 4, 1,
+                   5, 6, 1, 7, 8, 5, 3, 8, 1, 9,
+                   0, 9, 9, 8, 7, 5, 2, 7, 9, 6,
+                   5, 1, 6, 7, 3, 0, 3, 3, 6, 9,
+                   5, 4, 9, 3, 2, 5, 7, 2, 9, 1 };
+    return arr[n % 60];
+}
+int main() {
+    long long n;
+    while (scanf("%lld", &n) != EOF)
+        printf("%d\n", a(n));
+}</pre>
+<p> </p>
+</div><div id="comments"><div id="commento"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
+            </noscript></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://beian.miit.gov.cn/' target='_blank'>皖ICP备2020017558号</a><a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34030002020741' target='_blank'><img class='aligncenter size-full wp-image-84287' src='http://www.zekun.fun/bei.png' alt='备案图标' width='20' height='20' />皖公网安备 34030002020741号</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.commento.io/js/commento.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

@@ -1,0 +1,36 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>动态规划 - 标签 - Richard&#39;s Blog</title>
+        <link>http://bloglite.zekun.fun/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+        <description>动态规划 - 标签 - Richard&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Sat, 09 Jan 2021 07:16:33 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/" rel="self" type="application/rss+xml" /><item>
+    <title>Easy Fibonacci</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/</link>
+    <pubDate>Sat, 09 Jan 2021 07:16:33 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/</guid>
+    <description><![CDATA[题目描述 定义f0=0"f=,f1=1"f1=1 对于n&gt;=2"n=2定义 fn=(fn&#x2212;1+fn&#x2212;2)mod1]]></description>
+</item><item>
+    <title>哥德巴赫猜想</title>
+    <link>http://bloglite.zekun.fun/2021/uncategorized/644/</link>
+    <pubDate>Sat, 09 Jan 2021 07:03:19 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/uncategorized/644/</guid>
+    <description><![CDATA[题目描述 著名的哥德巴赫猜想可以陈述为：任何一个不小于6的偶数一定可以拆成两个质数的和。如6=3+3,8=5+3等，你的任务是将一个大于6的偶]]></description>
+</item><item>
+    <title>孪生素数</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/642/</link>
+    <pubDate>Sat, 09 Jan 2021 07:01:19 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/642/</guid>
+    <description><![CDATA[题目描述 在质数的大家庭中，大小之差不超过2的两个质数称它俩为一对孪生素数，如2和3、3和5、17和19等等。请你统计一下，在不大于自然数N的]]></description>
+</item><item>
+    <title>砝码问题</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/624/</link>
+    <pubDate>Fri, 08 Jan 2021 16:56:37 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/624/</guid>
+    <description><![CDATA[题目描述 小明童鞋有一个非常精确的天平和一堆砝码，数量为n(1=输入 一个正整数n,代表砝码的个数 随后有n个整数 a0 a1 a2 &#8230;an-1 代表砝码的的重量 输出 如果]]></description>
+</item></channel>
+</rss>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>再解炸弹人 - Richard&#39;s Blog</title><meta name="Description" content="Richard&#39;s Blog 极速版"><meta property="og:title" content="再解炸弹人" />
+<meta property="og:description" content="题目描述 现在炸弹不是想放在那里就能放在那里的了，必须由小人能够走到的地方才能放置炸弹。比如下面这个例子小人默认站在(3,3)这个位置。请问放" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/630/" /><meta property="og:image" content="http://bloglite.zekun.fun/images/avatar.gif"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-01-08T17:00:02&#43;00:00" />
+<meta property="article:modified_time" content="2021-01-08T17:00:02&#43;00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://bloglite.zekun.fun/images/avatar.gif"/>
+
+<meta name="twitter:title" content="再解炸弹人"/>
+<meta name="twitter:description" content="题目描述 现在炸弹不是想放在那里就能放在那里的了，必须由小人能够走到的地方才能放置炸弹。比如下面这个例子小人默认站在(3,3)这个位置。请问放"/>
+<meta name="application-name" content="Richard&#39;s Blog Lite 移动端">
+<meta name="apple-mobile-web-app-title" content="Richard&#39;s Blog Lite 移动端"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/630/" /><link rel="prev" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/628/" /><link rel="next" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/632/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "再解炸弹人",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/bloglite.zekun.fun\/2021\/%E7%BC%96%E7%A8%8B\/c-cpp\/630\/"
+        },"genre": "post","keywords": "acm, C\/C\u002b\u002b, 搜索, 编程","wordcount":  265 ,
+        "url": "http:\/\/bloglite.zekun.fun\/2021\/%E7%BC%96%E7%A8%8B\/c-cpp\/630\/","datePublished": "2021-01-08T17:00:02+00:00","dateModified": "2021-01-08T17:00:02+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Richard"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Richard&#39;s Blog"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Richard&#39;s Blog"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">再解炸弹人</h1><div class="content" id="content"><h2 class="page-header text-muted" id="题目描述">题目描述</h2>
+<div class="content">
+  现在炸弹不是想放在那里就能放在那里的了，必须由小人能够走到的地方才能放置炸弹。比如下面这个例子小人默认站在(3,3)这个位置。请问放在何处最多可以消灭多个敌人。<br /> <img loading="lazy" id="aimg_m7uLX" class="zoom" src="https://i0.wp.com/bbs.tianchai.org/data/attachment/forum/201312/30/211614zf17e3pvsjd3vf5e.png.thumb.jpg?resize=300%2C300" alt="" width="300" height="300" border="0" data-recalc-dims="1" />
+</div>
+<h2 class="page-header text-muted" id="输入">输入</h2>
+<div class="content">
+  第一行4个整数为n m x y，分别n和m表示迷宫的行和列，x和y表示小人的起始坐标（从0行0列开始计算），接下来的n行m列为地图。 1<=n,m<=50
+</div>
+<h2 class="page-header text-muted" id="输出">输出</h2>
+<p>最多可以消灭的敌人数。</p>
+<pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include&lt;bits/stdc++.h&gt;
+#define pi 3.14
+#define mod 100
+using namespace std;
+typedef pair&lt;int,int&gt; Node;
+typedef long long LL;
+const int Max_n=55;
+int n,m,sx,sy;
+char a[Max_n][Max_n];
+int vis[Max_n][Max_n],net[4][2]={{0,1},{1,0},{0,-1},{-1,0}};
+int GetSum(int i,int j){
+    int sum=0,x,y;
+    x=i,y=j;
+    while(a[x][y]!='#'){
+        if(a[x][y]=='G')
+            sum++;
+            x--;
+    }
+    
+    x=i,y=j;
+    while(a[x][y]!='#'){
+        if(a[x][y]=='G')
+            sum++;
+            x++; 
+    }
+    
+    x=i,y=j;
+    while(a[x][y]!='#'){ 
+        if(a[x][y]=='G')
+            sum++;
+        y--; 
+    }
+    x=i,y=j;
+    while(a[x][y]!='#'){
+        if(a[x][y]=='G')
+            sum++;
+        y++; 
+    }
+    return sum;
+}
+ 
+int bfs(){
+    memset(vis,0,sizeof(int));
+    queue&lt;Node&gt;q;
+    q.push(Node(sx,sy));
+    vis[sx][sy]=1;
+    int sum=0,mmax=0;
+    while(q.size()){
+        Node node=q.front();q.pop();
+        sum=GetSum(node.first,node.second);
+        if(sum&gt;mmax)
+            mmax=sum;
+        for(int i=0;i&lt;4;i++){
+            int nx=node.first+net[i][0];
+            int ny=node.second+net[i][1];
+            if(nx&lt;0||nx&gt;=n||ny&lt;0||ny&gt;=m) continue;
+            if(a[nx][ny]=='.'&&vis[nx][ny]==0){
+                vis[nx][ny]=1;
+                q.push(Node(nx,ny));
+            }
+        }
+    }
+    return mmax;
+}
+int main(){ 
+    scanf("%d%d%d%d",&n,&m,&sx,&sy);
+    for(int i=0;i&lt;n;i++)
+        scanf("%s",a[i]);
+    int mmax=bfs();
+    printf("%d\n",mmax);
+    return 0;
+}</pre>
+<p> </p>
+</div><div id="comments"><div id="commento"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
+            </noscript></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://beian.miit.gov.cn/' target='_blank'>皖ICP备2020017558号</a><a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34030002020741' target='_blank'><img class='aligncenter size-full wp-image-84287' src='http://www.zekun.fun/bei.png' alt='备案图标' width='20' height='20' />皖公网安备 34030002020741号</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.commento.io/js/commento.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

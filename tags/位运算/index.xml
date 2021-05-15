@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>位运算 - 标签 - Richard&#39;s Blog</title>
+        <link>http://bloglite.zekun.fun/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+        <description>位运算 - 标签 - Richard&#39;s Blog</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Sat, 09 Jan 2021 06:55:36 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/tags/%E4%BD%8D%E8%BF%90%E7%AE%97/" rel="self" type="application/rss+xml" /><item>
+    <title>平方取中法</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/638/</link>
+    <pubDate>Sat, 09 Jan 2021 06:55:36 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/638/</guid>
+    <description><![CDATA[题目描述 平方取中法(midsquare method)是产生[0，1]均匀分布随机数的方法之一，亦称冯·诺伊曼取中法，最早由冯·诺伊曼(Joh]]></description>
+</item></channel>
+</rss>

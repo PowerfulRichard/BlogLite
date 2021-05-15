@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>一种排序 - Richard&#39;s Blog</title><meta name="Description" content="Richard&#39;s Blog 极速版"><meta property="og:title" content="一种排序" />
+<meta property="og:description" content="题目描述 现在有很多长方形，每一个长方形都有一个编号，这个编号可以重复；还知道这个长方形的宽和长，编号、长、宽都是整数；现在要求按照一下方式排" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/508/" /><meta property="og:image" content="http://bloglite.zekun.fun/images/avatar.gif"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2020-12-18T06:37:08&#43;00:00" />
+<meta property="article:modified_time" content="2020-12-18T06:37:08&#43;00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://bloglite.zekun.fun/images/avatar.gif"/>
+
+<meta name="twitter:title" content="一种排序"/>
+<meta name="twitter:description" content="题目描述 现在有很多长方形，每一个长方形都有一个编号，这个编号可以重复；还知道这个长方形的宽和长，编号、长、宽都是整数；现在要求按照一下方式排"/>
+<meta name="application-name" content="Richard&#39;s Blog Lite 移动端">
+<meta name="apple-mobile-web-app-title" content="Richard&#39;s Blog Lite 移动端"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/508/" /><link rel="prev" href="http://bloglite.zekun.fun/2020/uncategorized/506/" /><link rel="next" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/513/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "一种排序",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/bloglite.zekun.fun\/2020\/%E7%BC%96%E7%A8%8B\/c-cpp\/508\/"
+        },"genre": "post","keywords": "acm, C\/C\u002b\u002b, 编程","wordcount":  456 ,
+        "url": "http:\/\/bloglite.zekun.fun\/2020\/%E7%BC%96%E7%A8%8B\/c-cpp\/508\/","datePublished": "2020-12-18T06:37:08+00:00","dateModified": "2020-12-18T06:37:08+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Richard"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="Richard&#39;s Blog"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="Richard&#39;s Blog"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">一种排序</h1><div class="content" id="content"><h3 class="page-header text-muted" id="题目描述"><strong>题目描述</strong></h3>
+<div class="content">
+  <p>
+    现在有很多长方形，每一个长方形都有一个编号，这个编号可以重复；还知道这个长方形的宽和长，编号、长、宽都是整数；现在要求按照一下方式排序（默认排序规则都是从小到大）；
+  </p>
+  <p>
+    1.按照编号从小到大排序
+  </p>
+  <p>
+    2.对于编号相等的长方形，按照长方形的长排序；
+  </p>
+  <p>
+    3.如果编号和长都相同，按照长方形的宽排序；
+  </p>
+  <p>
+    4.如果编号、长、宽都相同，就只保留一个长方形用于排序,删除多余的长方形；最后排好序按照指定格式显示所有的长方形；
+  </p>
+</div>
+<h3 class="page-header text-muted" id="输入"><strong>输入</strong></h3>
+<div class="content">
+  <p>
+    第一行有一个整数 0<n<10000,表示接下来有n组测试数据； <br=&#8221;&#8221;>每一组第一行有一个整数 0<m<1000，表示有m个长方形； <br=&#8221;&#8221;>接下来的m行，每一行有三个数 ，第一个数表示长方形的编号，第二个和第三个数值大的表示长，数值小的表示宽相等，说明这是一个正方形（数据约定长宽与编号都小于10000）；</m<1000，表示有m个长方形；></n<10000,表示接下来有n组测试数据
+  </p>
+</div>
+<h3 class="page-header text-muted" id="输出"><strong>输出</strong></h3>
+<div class="content">
+  顺序输出每组数据的所有符合条件的长方形的 编号 长 宽
+</div>
+<div>
+  <pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include &lt;iostream&gt;
+#include &lt;algorithm&gt;
+<p>using namespace std;</p>
+<p>struct node {
+int number, len, width;
+}P[1005];</p>
+<p>bool cmp (node a, node b) {
+if (a.number != b.number) return a.number&lt;b.number;
+if (a.len != b.len) return a.len&lt;b.len;
+return a.width&lt;b.width;
+}</p>
+<p>int main() {
+int N;
+cin &gt;&gt;N;
+while (N &ndash;) {
+int m;
+cin &gt;&gt;m;
+for (int i=0; i&lt;m; ++i) {
+int a, b, c;
+cin &gt;&gt;a &gt;&gt;b &gt;&gt;c;
+P[i].number = a;
+P[i].len = max(b, c);
+P[i].width = min(b, c);
+}</p>
+<pre><code>    sort (P, P+m, cmp);
+    cout &amp;lt;&amp;lt;P[0].number &amp;lt;&amp;lt;&quot; &quot; &amp;lt;&amp;lt;P[0].len &amp;lt;&amp;lt;&quot; &quot; &amp;lt;&amp;lt;P[0].width &amp;lt;&amp;lt;endl;
+    for (int i=1; i&amp;lt;m; ++i) {
+        if (P[i].number == P[i-1].number &amp;&amp; P[i].len == P[i-1].len &amp;&amp; P[i].width == P[i-1].width) continue;
+        cout &amp;lt;&amp;lt;P[i].number &amp;lt;&amp;lt;&quot; &quot; &amp;lt;&amp;lt;P[i].len &amp;lt;&amp;lt;&quot; &quot; &amp;lt;&amp;lt;P[i].width &amp;lt;&amp;lt;endl;
+    }
+}
+return 0;
+</code></pre>
+<p>}</pre></p>
+  <p>
+    &nbsp;
+  </p>
+</div></div><div id="comments"><div id="commento"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
+            </noscript></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://beian.miit.gov.cn/' target='_blank'>皖ICP备2020017558号</a><a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34030002020741' target='_blank'><img class='aligncenter size-full wp-image-84287' src='http://www.zekun.fun/bei.png' alt='备案图标' width='20' height='20' />皖公网安备 34030002020741号</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.commento.io/js/commento.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>
