@@ -1,19 +1,13 @@
 # 再解炸弹人
 
-## 题目描述 {.page-header.text-muted}
+## 题目描述
+  现在炸弹不是想放在那里就能放在那里的了，必须由小人能够走到的地方才能放置炸弹。比如下面这个例子小人默认站在(3,3)这个位置。请问放在何处最多可以消灭多个敌人。
 
-<div class="content">
-  现在炸弹不是想放在那里就能放在那里的了，必须由小人能够走到的地方才能放置炸弹。比如下面这个例子小人默认站在(3,3)这个位置。请问放在何处最多可以消灭多个敌人。<br /> <img loading="lazy" id="aimg_m7uLX" class="zoom" src="https://i0.wp.com/bbs.tianchai.org/data/attachment/forum/201312/30/211614zf17e3pvsjd3vf5e.png.thumb.jpg?resize=300%2C300" alt="" width="300" height="300" border="0" data-recalc-dims="1" />
-</div>
-
-## 输入 {.page-header.text-muted}
-
-<div class="content">
+## 输入
   第一行4个整数为n m x y，分别n和m表示迷宫的行和列，x和y表示小人的起始坐标（从0行0列开始计算），接下来的n行m列为地图。 1<=n,m<=50
-</div>
 
-## 输出 {.page-header.text-muted}
 
+## 输出 
 最多可以消灭的敌人数。
 
 ```cpp
