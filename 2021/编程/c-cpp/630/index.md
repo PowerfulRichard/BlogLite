@@ -16,11 +16,12 @@
 
 最多可以消灭的敌人数。
 
-<pre class="EnlighterJSRAW" data-enlighter-language="cpp">#include&lt;bits/stdc++.h&gt;
+```cpp
+#include<bits/stdc++.h>
 #define pi 3.14
 #define mod 100
 using namespace std;
-typedef pair&lt;int,int&gt; Node;
+typedef pair<int,int> Node;
 typedef long long LL;
 const int Max_n=55;
 int n,m,sx,sy;
@@ -87,6 +88,5 @@ int main(){
     int mmax=bfs();
     printf("%d\n",mmax);
     return 0;
-}</pre>
-
-&nbsp;
+}
+```
