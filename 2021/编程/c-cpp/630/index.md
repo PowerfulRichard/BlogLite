@@ -15,72 +15,74 @@
 #define pi 3.14
 #define mod 100
 using namespace std;
-typedef pair<int,int> Node;
+typedef pair<int, int> Node;
 typedef long long LL;
-const int Max_n=55;
-int n,m,sx,sy;
+const int Max_n = 55;
+int n, m, sx, sy;
 char a[Max_n][Max_n];
-int vis[Max_n][Max_n],net[4][2]={{0,1},{1,0},{0,-1},{-1,0}};
-int GetSum(int i,int j){
-    int sum=0,x,y;
-    x=i,y=j;
-    while(a[x][y]!='#'){
-        if(a[x][y]=='G')
-            sum++;
-            x--;
-    }
-    
-    x=i,y=j;
-    while(a[x][y]!='#'){
-        if(a[x][y]=='G')
-            sum++;
-            x++; 
-    }
-    
-    x=i,y=j;
-    while(a[x][y]!='#'){ 
-        if(a[x][y]=='G')
-            sum++;
-        y--; 
-    }
-    x=i,y=j;
-    while(a[x][y]!='#'){
-        if(a[x][y]=='G')
-            sum++;
-        y++; 
-    }
-    return sum;
+int vis[Max_n][Max_n], net[4][2] = {
+	{0,1},{1,0},{0,-1},{-1,0}
+};
+int GetSum(int i, int j) {
+	int sum = 0, x, y;
+	x = i, y = j;
+	while (a[x][y] != '#') {
+		if (a[x][y] == 'G')
+			sum++;
+		x--;
+	}
+
+	x = i, y = j;
+	while (a[x][y] != '#') {
+		if (a[x][y] == 'G')
+			sum++;
+		x++;
+	}
+
+	x = i, y = j;
+	while (a[x][y] != '#') {
+		if (a[x][y] == 'G')
+			sum++;
+		y--;
+	}
+	x = i, y = j;
+	while (a[x][y] != '#') {
+		if (a[x][y] == 'G')
+			sum++;
+		y++;
+	}
+	return sum;
 }
- 
-int bfs(){
-    memset(vis,0,sizeof(int));
-    queue&lt;Node&gt;q;
-    q.push(Node(sx,sy));
-    vis[sx][sy]=1;
-    int sum=0,mmax=0;
-    while(q.size()){
-        Node node=q.front();q.pop();
-        sum=GetSum(node.first,node.second);
-        if(sum&gt;mmax)
-            mmax=sum;
-        for(int i=0;i&lt;4;i++){
-            int nx=node.first+net[i][0];
-            int ny=node.second+net[i][1];
-            if(nx&lt;0||nx&gt;=n||ny&lt;0||ny&gt;=m) continue;
-            if(a[nx][ny]=='.'&&vis[nx][ny]==0){
-                vis[nx][ny]=1;
-                q.push(Node(nx,ny));
-            }
-        }
-    }
-    return mmax;
+
+int bfs() {
+	memset(vis, 0, sizeof(int));
+	queue <Node> q;
+	q.push(Node(sx, sy));
+	vis[sx][sy] = 1;
+	int sum = 0, mmax = 0;
+	while (q.size()) {
+		Node node = q.front(); q.pop();
+		sum = GetSum(node.first, node.second);
+		if (sum > mmax)
+			mmax = sum;
+		for (int i = 0; i < 4; i++) {
+			int nx = node.first + net[i][0];
+			int ny = node.second + net[i][1];
+			if (nx < 0 || nx >= n || ny < 0 || ny >= m) continue;
+			if (a[nx][ny] == '.' && vis[nx][ny] == 0) {
+				vis[nx][ny] = 1;
+				q.push(Node(nx, ny));
+			}
+		}
+	}
+	return mmax;
 }
-int main(){ 
-    scanf("%d%d%d%d",&n,&m,&sx,&sy);
-    for(int i=0;i&lt;n;i++)
-        scanf("%s",a[i]);
-    int mmax=bfs();
-    printf("%d\n",mmax);
-    return 0;
+int main() {
+	scanf("%d%d%d%d", &n, &m, &sx, &sy);
+	for (int i = 0; i < n; i++)
+		scanf("%s", a[i]);
+	int mmax = bfs();
+	printf("%d\n", mmax);
+	return 0;
 }
 ```
