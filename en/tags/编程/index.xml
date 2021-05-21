@@ -1,0 +1,78 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>编程 - Tag - HZK&#39;s Blog Lite</title>
+        <link>http://bloglite.zekun.fun/en/tags/%E7%BC%96%E7%A8%8B/</link>
+        <description>编程 - Tag - HZK&#39;s Blog Lite</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Tue, 22 Dec 2020 15:58:12 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/en/tags/%E7%BC%96%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>Sort I – Bubble Sort</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/531/</link>
+    <pubDate>Tue, 22 Dec 2020 15:58:12 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/531/</guid>
+    <description><![CDATA[题目描述 Bubble Sort Write a program of the Bubble Sort algorithm which sorts a sequence A in ascending order. The algorithm should be based on the following pseudocode: BubbleSort(A) 1 for i = 0 to A.length-1 2 for j = A.length-1 downto i+1 3 if A[j] 4 swap A[j] and A[j-1] Note that, indices for array elements are based on 0-origin. Your program should also print the]]></description>
+</item><item>
+    <title>Getting Started – Insertion Sort</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/529/</link>
+    <pubDate>Tue, 22 Dec 2020 15:56:31 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/529/</guid>
+    <description><![CDATA[题目描述 Insertion Sort Write a program of the Insertion Sort algorithm which sorts a sequence A in ascending order. The algorithm should be based on the following pseudocode: for i = 1 to A.length-1 key = A[i] /* insert A[i] into the sorted sequence A[0,&#8230;,j-1] */ j = i &#8211; 1 while j = 0 and A[j] key A[j+1] = A[j] j&#8211; A[j+1] = key Note that,]]></description>
+</item><item>
+    <title>Array – Official House</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/412/</link>
+    <pubDate>Wed, 25 Nov 2020 15:23:21 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/412/</guid>
+    <description><![CDATA[题目描述 You manage 4 buildings, each of which has 3 floors, each of which consists of 10 rooms. Write a program which reads a sequence of tenant/leaver notices, and reports the number of tenants for each room. For each notice, you are given four integers b, f, r and v which represent that v persons entered to room r of fth floor at building b. If v]]></description>
+</item><item>
+    <title>Array – Matrix Vector Multiplication</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/396/</link>
+    <pubDate>Fri, 20 Nov 2020 11:55:33 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/396/</guid>
+    <description><![CDATA[题目描述 Matrix Vector Multiplication Write a program which reads a n×m matrix A and a m×1 vector b, and prints their product Ab. A column vector with m elements is represented by the following equation. A n×m matrix with mm column vectors, each of which consists of n elements, is represented by the following equation. i-th element of a m×]]></description>
+</item><item>
+    <title>Array – Reversing Numbers</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/380/</link>
+    <pubDate>Mon, 16 Nov 2020 07:19:50 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/380/</guid>
+    <description><![CDATA[题目描述 Reversing Numbers Write a program which reads a sequence and prints it in the reverse order. 输入 The input is given in the following format: n a1 a2 . . . an n is the size of the sequence and ai is the ith element of the sequence. 输出 Print the reversed sequence in a line. Print a single space character between adjacent elements]]></description>
+</item><item>
+    <title>Structured Program I – Print a Chessboard</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/291/</link>
+    <pubDate>Thu, 05 Nov 2020 11:35:08 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/291/</guid>
+    <description><![CDATA[题目描述 Print a Chessboard Draw a chessboard which has a height of H cm and a width of W cm. For example, the following figure shows a chessboard which has a height of 6 cm and a width of 10 cm. #.#.#.#.#. .#.#.#.#.# #.#.#.#.#. .#.#.#.#.# #.#.#.#.#. .#.#.#.#.# Note that the top left corner should be drawn by &#8216;#&#8217;. 输入 The input consists of multiple datasets. Each]]></description>
+</item><item>
+    <title>Lucky Words</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/280/</link>
+    <pubDate>Sat, 31 Oct 2020 12:14:14 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/280/</guid>
+    <description><![CDATA[题目描述 如果-个数 n 能被各位数字之和整除，那么这个数就是 Lucky Word。 输入 多组输入 每行一个数n 输出 如果这个数是Lucky Word 那么输出 &#8220;Lucky Word&]]></description>
+</item><item>
+    <title>Swapping Two Numbers</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/150/</link>
+    <pubDate>Wed, 28 Oct 2020 12:51:19 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/150/</guid>
+    <description><![CDATA[题目描述 Swapping Two Numbers Write a program which reads two integers x and y, and prints them in ascending order. 输入 The input consists of multiple datasets. Each dataset consists of two integers x and y separated by a single space. The input ends with two 0 (when both x and y are zero). Your program should not process for these terminal symbols. 输出 For]]></description>
+</item><item>
+    <title>Repetitive Processing – How Many Divisors?</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/174/</link>
+    <pubDate>Tue, 27 Oct 2020 12:26:08 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/174/</guid>
+    <description><![CDATA[题目描述 How Many Divisors? Write a program which reads three integers a, b and c, and prints the number of divisors of c between a and b. 输入 Three integers a, b and c are given in a line separated by a single space. 输出 Print the number of divisors in a line. #include&lt;bits/stdc++.h&gt; using namespace std; int main(){ int a,b,c,i=0; scanf("%d %d %d",&a,&b,&c); while(a&lt;=b){]]></description>
+</item><item>
+    <title>Repetitive Processing – Print Test Cases</title>
+    <link>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/130/</link>
+    <pubDate>Tue, 27 Oct 2020 03:04:24 &#43;0000</pubDate>
+    <author>Author</author>
+    <guid>http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/130/</guid>
+    <description><![CDATA[题目描述 Print Test Cases In an online judge system, a judge file may includes multiple datasets to check whether the submitted program outputs a correct answer for each test case. This task is to practice solving a problem with multiple datasets. Write a program which reads an integer x and print it as is. Note that multiple datasets are given for this problem. 输入 The input]]></description>
+</item></channel>
+</rss>

@@ -1,10 +1,17 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>所有文章 - Richard&#39;s Blog</title>
+        <title>所有文章 - HZK&#39;s Blog 极速精简版</title>
         <link>http://bloglite.zekun.fun/posts/</link>
-        <description>所有文章 | Richard&#39;s Blog</description>
+        <description>所有文章 | HZK&#39;s Blog 极速精简版</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
-            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Wed, 19 May 2021 12:28:50 &#43;0000</lastBuildDate><atom:link href="http://bloglite.zekun.fun/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>SSR</title>
+    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/740/</link>
+    <pubDate>Wed, 19 May 2021 12:28:50 &#43;0000</pubDate>
+    <author>作者</author>
+    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/740/</guid>
+    <description><![CDATA[题目描述 引用 事情，是这样的。 有这么一天双休日的中午。 我刚把我衣服扔进了洗衣机，然后拿了个小板凳坐在旁边发呆。 然后突然想到这么无聊干脆玩会阴阳]]></description>
+</item><item>
     <title>C&#43;&#43;面向对象：入门</title>
     <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/754/</link>
     <pubDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</pubDate>
@@ -67,12 +74,5 @@
     <author>作者</author>
     <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/659/</guid>
     <description><![CDATA[题目描述 定义f0=0"f=,f1=1"f1=1 对于n&gt;=2"n=2定义 fn=(fn&#x2212;1+fn&#x2212;2)mod1]]></description>
-</item><item>
-    <title>分数化小数</title>
-    <link>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/657/</link>
-    <pubDate>Sat, 09 Jan 2021 07:14:38 &#43;0000</pubDate>
-    <author>作者</author>
-    <guid>http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/657/</guid>
-    <description><![CDATA[题目描述 输入正整数a"a,b"b,c"c 其中1&#x2264;a,b&#x003C;106"1≤a,b106，c&#x2264;100"c≤]]></description>
 </item></channel>
 </rss>

@@ -2,7 +2,8 @@
 
 使用最简单的if语句实现给定年月判断天数
 
-<pre class="EnlighterJSRAW" data-enlighter-language="cpp" data-enlighter-theme="godzilla">#include&lt;bits/stdc++.h&gt;
+```cpp
+#include<bits/stdc++.h>
 using namespace std;
 int main() {
 	int y, m, d;
@@ -27,6 +28,5 @@ int main() {
 		}
 	cout &lt;&lt; d &lt;&lt; endl;
 	return 0;
-}</pre>
-
-&nbsp;
+}
+```

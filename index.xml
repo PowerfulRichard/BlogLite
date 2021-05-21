@@ -1,10 +1,10 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Richard&#39;s Blog</title>
+        <title>HZK&#39;s Blog 极速精简版</title>
         <link>http://bloglite.zekun.fun/</link>
         <description>Richard&#39;s Blog 极速版</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>hu@zekun.fun (Richard)</managingEditor>
-            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Tue, 13 Apr 2021 11:47:34 &#43;0000</lastBuildDate>
+            <webMaster>hu@zekun.fun (Richard)</webMaster><lastBuildDate>Wed, 19 May 2021 12:28:50 &#43;0000</lastBuildDate>
             <atom:link href="http://bloglite.zekun.fun/index.xml" rel="self" type="application/rss+xml" />
         </channel>
 </rss>

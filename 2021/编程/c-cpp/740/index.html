@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>SSR - HZK&#39;s Blog 极速精简版</title><meta name="Description" content="Richard&#39;s Blog 极速版"><meta property="og:title" content="SSR" />
+<meta property="og:description" content="题目描述 引用 事情，是这样的。 有这么一天双休日的中午。 我刚把我衣服扔进了洗衣机，然后拿了个小板凳坐在旁边发呆。 然后突然想到这么无聊干脆玩会阴阳" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/740/" /><meta property="og:image" content="http://bloglite.zekun.fun/images/avatar.gif"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-05-19T12:28:50&#43;00:00" />
+<meta property="article:modified_time" content="2021-05-19T12:28:50&#43;00:00" /><meta property="og:site_name" content="HZK&#39;s Blog 极速精简版" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="http://bloglite.zekun.fun/images/avatar.gif"/>
+
+<meta name="twitter:title" content="SSR"/>
+<meta name="twitter:description" content="题目描述 引用 事情，是这样的。 有这么一天双休日的中午。 我刚把我衣服扔进了洗衣机，然后拿了个小板凳坐在旁边发呆。 然后突然想到这么无聊干脆玩会阴阳"/>
+<meta name="application-name" content="Richard&#39;s Blog Lite 移动端">
+<meta name="apple-mobile-web-app-title" content="Richard&#39;s Blog Lite 移动端"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/740/" /><link rel="prev" href="http://bloglite.zekun.fun/2021/%E7%BC%96%E7%A8%8B/c-cpp/754/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "SSR",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/bloglite.zekun.fun\/2021\/%E7%BC%96%E7%A8%8B\/c-cpp\/740\/"
+        },"genre": "post","keywords": "acm, C\/C\u002b\u002b, 动态规划","wordcount":  695 ,
+        "url": "http:\/\/bloglite.zekun.fun\/2021\/%E7%BC%96%E7%A8%8B\/c-cpp\/740\/","datePublished": "2021-05-19T12:28:50+00:00","dateModified": "2021-05-19T12:28:50+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "Richard"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="HZK&#39;s Blog 极速精简版"></a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2021/%E7%BC%96%E7%A8%8B/c-cpp/740/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="HZK&#39;s Blog 极速精简版"></a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2021/%E7%BC%96%E7%A8%8B/c-cpp/740/" selected>简体中文</option></select>
+                </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">SSR</h1><div class="content" id="content"><h2 id="题目描述">题目描述</h2>
+<div class="details admonition quote open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-quote-right fa-fw"></i>引用<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">事情，是这样的。
+有这么一天双休日的中午。
+我刚把我衣服扔进了洗衣机，然后拿了个小板凳坐在旁边发呆。
+然后突然想到这么无聊干脆玩会阴阳师好了，于是从斗篷帽子里掏出我的手机登录了阴阳师。
+看着更新公告里写着的新SSR式神一目连感叹了一下：我要是能有个一目连该多好啊
+看了一眼我家帅气的扛把子咕咕，正准备肝困难的时候发现庭院里那一串灯笼里的调查问卷有蝴蝶在绕，于是点进去填了一波在最结尾写上了我当时的愿望：我想要一目连。
+然后奖励了一个符，顺手就抽了。本来以为又是R卡，没想到手机震动了一下。
+握草！！！一目连！！！！
+当时我就激动的站了起来使劲看了一眼然后仰天大笑以及截图装逼。</div>
+        </div>
+    </div>
+<div class="details admonition question open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-question-circle fa-fw"></i>问题<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">SSR全称为superior super rare，特级超稀有。一般为卡牌类游戏最高稀有等级。
+题目是给出三个字符，求其升级到SSR所需要的次数。
+最小为AAA，最大为SSR；
+SSQ升级到SSR需要升级1次，
+SRR升级到SSR需要升级19次。</div>
+        </div>
+    </div>
+<h2 id="输入">输入</h2>
+<p>第一行输入一个整数T（代表T组数据）</p>
+<p>接下来T行，包含3个连续的大写字母（A~S）</p>
+<h2 id="输出">输出</h2>
+<p>每个样例输出一行
+升级到SSR所需的次数</p>
+<h2 id="样例输入">样例输入</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">3
+SSR
+SRR
+AAA
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="样例输出">样例输出</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">0
+19
+6857
+</code></pre></td></tr></table>
+</div>
+</div><hr>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">SRR升级到SSR的过程：<br>
+SRR -&gt; SRS -&gt; SSA -&gt;SSB -&gt; SSC -&gt; ……-&gt;SSR 共19次</div>
+        </div>
+    </div>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>解法<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">本质上可看做19进制换算</div>
+        </div>
+    </div>
+<h2 id="题解">题解</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp">
+</span><span class="cp">#include</span> <span class="cpf">&lt;cstring&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">change</span><span class="p">(</span><span class="kt">char</span> <span class="n">n</span><span class="p">){</span>
+    <span class="k">switch</span><span class="p">(</span><span class="n">n</span><span class="p">){</span>
+        <span class="k">case</span> <span class="sc">&#39;A&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;B&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;C&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">2</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;D&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">3</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;E&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">4</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;F&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">5</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;G&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">6</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;H&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">7</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;I&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">8</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;J&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">9</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;K&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">10</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;L&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">11</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;M&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">12</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;N&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">13</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;O&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">14</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;P&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">15</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;Q&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">16</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;R&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">17</span><span class="p">;</span>
+        <span class="k">case</span> <span class="sc">&#39;S&#39;</span><span class="o">:</span><span class="k">return</span> <span class="mi">18</span><span class="p">;</span>
+        <span class="k">default</span> <span class="o">:</span><span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">double</span> <span class="nf">power</span><span class="p">(</span><span class="kt">double</span> <span class="n">x</span><span class="p">,</span> <span class="kt">int</span> <span class="n">n</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">double</span> <span class="n">val</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">n</span><span class="o">--</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">*=</span> <span class="n">x</span><span class="p">;</span>
+    <span class="k">return</span> <span class="n">val</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">num</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">num</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">num</span><span class="o">--</span><span class="p">){</span>
+    <span class="kt">char</span> <span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">c</span><span class="p">;</span>
+    <span class="n">cin</span><span class="o">&gt;&gt;</span><span class="n">a</span><span class="o">&gt;&gt;</span><span class="n">b</span><span class="o">&gt;&gt;</span><span class="n">c</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">t</span><span class="p">;</span>
+    <span class="n">t</span><span class="o">=</span><span class="n">change</span><span class="p">(</span><span class="n">a</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="o">+</span><span class="n">change</span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="o">+</span><span class="n">change</span><span class="p">(</span><span class="n">c</span><span class="p">)</span><span class="o">*</span><span class="n">power</span><span class="p">(</span><span class="mi">19</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">&lt;&lt;</span><span class="mi">6857</span><span class="o">-</span><span class="n">t</span><span class="o">&lt;&lt;</span><span class="n">endl</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div></div><div id="comments"><div id="commento"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
+            </noscript></div></div></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span>&nbsp;|&nbsp;<span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank">CC BY-NC 4.0</a></span><span class="icp-splitter">&nbsp;|&nbsp;</span><br class="icp-br"/>
+                    <span class="icp"><a href='https://beian.miit.gov.cn/' target='_blank'>皖ICP备2020017558号</a><a href='http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=34030002020741' target='_blank'><img class='aligncenter size-full wp-image-84287' src='http://www.zekun.fun/bei.png' alt='备案图标' width='20' height='20' />皖公网安备 34030002020741号</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/katex/katex.min.css"><link rel="stylesheet" href="/lib/katex/copy-tex.min.css"><link rel="stylesheet" href="/lib/cookieconsent/cookieconsent.min.css"><script type="text/javascript" src="https://cdn.commento.io/js/commento.js" defer></script><script type="text/javascript" src="/lib/smooth-scroll/smooth-scroll.min.js"></script><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.stemmer.support.min.js"></script><script type="text/javascript" src="/lib/lunr/lunr.zh.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/mhchem.min.js"></script><script type="text/javascript" src="/lib/cookieconsent/cookieconsent.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":10},"comment":{},"cookieconsent":{"content":{"dismiss":"同意","link":"了解更多","message":"本网站使用 Cookies 来改善您的浏览体验."},"enable":true,"palette":{"button":{"background":"#f0f0f0"},"popup":{"background":"#1aa3ff"}},"theme":"edgeless"},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","lunrLanguageCode":"zh","lunrSegmentitURL":"/lib/lunr/lunr.segmentit.js","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

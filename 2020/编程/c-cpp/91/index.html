@@ -5,22 +5,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>给定秒数计算小时分钟（时间转换） - Richard&#39;s Blog</title><meta name="Description" content="Richard&#39;s Blog 极速版"><meta property="og:title" content="给定秒数计算小时分钟（时间转换）" />
-<meta property="og:description" content="题目描述 给定一个以秒为单位的时间t，要求用 “::”的格式来表示这个时间。表示时间，表示分钟， 而表示秒，它们都是整数且没有前导的“0”。例如，" />
+        <title>给定秒数计算小时分钟（时间转换） - HZK&#39;s Blog 极速精简版</title><meta name="Description" content="Richard&#39;s Blog 极速版"><meta property="og:title" content="给定秒数计算小时分钟（时间转换）" />
+<meta property="og:description" content="给定秒数计算小时分钟（时间转换） 题目描述 给定一个以秒为单位的时间t，要求用 “&lt; H&gt; :&lt; M&gt; :&lt; S&gt; ”的格式来表示这个时间。&lt; H&gt; 表示时间，&" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/91/" /><meta property="og:image" content="http://bloglite.zekun.fun/images/avatar.gif"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2020-10-18T12:44:22&#43;00:00" />
-<meta property="article:modified_time" content="2020-10-18T12:44:22&#43;00:00" />
+<meta property="article:modified_time" content="2020-10-18T12:44:22&#43;00:00" /><meta property="og:site_name" content="HZK&#39;s Blog 极速精简版" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="http://bloglite.zekun.fun/images/avatar.gif"/>
 
 <meta name="twitter:title" content="给定秒数计算小时分钟（时间转换）"/>
-<meta name="twitter:description" content="题目描述 给定一个以秒为单位的时间t，要求用 “::”的格式来表示这个时间。表示时间，表示分钟， 而表示秒，它们都是整数且没有前导的“0”。例如，"/>
+<meta name="twitter:description" content="给定秒数计算小时分钟（时间转换） 题目描述 给定一个以秒为单位的时间t，要求用 “&lt; H&gt; :&lt; M&gt; :&lt; S&gt; ”的格式来表示这个时间。&lt; H&gt; 表示时间，&"/>
 <meta name="application-name" content="Richard&#39;s Blog Lite 移动端">
 <meta name="apple-mobile-web-app-title" content="Richard&#39;s Blog Lite 移动端"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/91/" /><link rel="prev" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/67/" /><link rel="next" href="http://bloglite.zekun.fun/2020/%E5%A4%A9%E6%A2%AF%E5%9B%BE/95/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/91/" /><link rel="prev" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/67/" /><link rel="next" href="http://bloglite.zekun.fun/2020/%E7%BC%96%E7%A8%8B/c-cpp/114/" /><link rel="stylesheet" href="/lib/normalize/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"><link rel="stylesheet" href="/lib/animate/animate.min.css"><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -29,7 +29,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "http:\/\/bloglite.zekun.fun\/2020\/%E7%BC%96%E7%A8%8B\/c-cpp\/91\/"
-        },"genre": "post","keywords": "acm, C\/C\u002b\u002b, 编程","wordcount":  172 ,
+        },"genre": "post","keywords": "acm, C\/C\u002b\u002b, 编程","wordcount":  240 ,
         "url": "http:\/\/bloglite.zekun.fun\/2020\/%E7%BC%96%E7%A8%8B\/c-cpp\/91\/","datePublished": "2020-10-18T12:44:22+00:00","dateModified": "2020-10-18T12:44:22+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -43,10 +43,12 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="Richard&#39;s Blog"></a>
+            <a href="/" title="HZK&#39;s Blog 极速精简版"></a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><span class="menu-item search" id="search-desktop">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item language" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                        <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/2020/%E7%BC%96%E7%A8%8B/c-cpp/91/" selected>简体中文</option></select>
+                    </a><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
                         <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
                             <i class="fas fa-search fa-fw"></i>
@@ -67,7 +69,7 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="Richard&#39;s Blog"></a>
+                <a href="/" title="HZK&#39;s Blog 极速精简版"></a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
@@ -89,9 +91,11 @@
                     <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
                         取消
                     </a>
-                </div><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                </div><a class="menu-item" href="/posts/" title="">文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
-            </a></div>
+            </a><a href="javascript:void(0);" class="menu-item" title="选择语言">简体中文<i class="fas fa-chevron-right fa-fw"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/2020/%E7%BC%96%E7%A8%8B/c-cpp/91/" selected>简体中文</option></select>
+                </a></div>
     </div>
 </header>
 <div class="search-dropdown desktop">
@@ -101,39 +105,42 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">给定秒数计算小时分钟（时间转换）</h1><div class="content" id="content"><div class="content">
-  <h2 class="page-header text-muted">
-    题目描述
-  </h2>
-  <div class="content">
-    给定一个以秒为单位的时间t，要求用  “< H> :< M> :< S> ”的格式来表示这个时间。< H> 表示时间，< M> 表示分钟，  而< S> 表示秒，它们都是整数且没有前导的“0”。例如，若t=0，则应输出是“0:0:0”；若t=3661，则输出“1:1:1”。
-  </div>
-  <h2 class="page-header text-muted">
-    输入
-  </h2>
-  <div class="content">
-    输入只有一行，是一个整数t（0< =t< =86399）。
-  </div>
-  <h2 class="page-header text-muted">
-    输出
-  </h2>
-  <div class="content">
-    输出只有一行，是以“< H> :< M> :< S> ”的格式所表示的时间，不包括引号。
-  </div>
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">给定秒数计算小时分钟（时间转换）</h1><div class="content" id="content"><h1 id="给定秒数计算小时分钟时间转换">给定秒数计算小时分钟（时间转换）</h1>
+<h2 id="题目描述">题目描述</h2>
+<h5 id="给定一个以秒为单位的时间t要求用--h--m--s-的格式来表示这个时间-h-表示时间-m-表示分钟-而-s-表示秒它们都是整数且没有前导的0例如若t0则应输出是000若t3661则输出111">给定一个以秒为单位的时间t，要求用  “&lt; H&gt; :&lt; M&gt; :&lt; S&gt; ”的格式来表示这个时间。&lt; H&gt; 表示时间，&lt; M&gt; 表示分钟，  而&lt; S&gt; 表示秒，它们都是整数且没有前导的“0”。例如，若t=0，则应输出是“0:0:0”；若t=3661，则输出“1:1:1”。</h5>
+<h2 id="输入">输入</h2>
+<h5 id="输入只有一行是一个整数t0-t-86399">输入只有一行，是一个整数t（0&lt; =t&lt; =86399）。</h5>
+<h2 id="输出">输出</h2>
+<h5 id="输出只有一行是以-h--m--s-的格式所表示的时间不包括引号">输出只有一行，是以“&lt; H&gt; :&lt; M&gt; :&lt; S&gt; ”的格式所表示的时间，不包括引号。</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-cpp" data-lang="cpp"><span class="cp">#include</span><span class="cpf">&lt;bits/stdc++.h&gt;</span><span class="cp">
+</span><span class="cp"></span><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(){</span>
+    <span class="kt">int</span> <span class="n">h</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span><span class="n">s</span><span class="p">,</span><span class="n">x</span><span class="p">;</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&#34;%d&#34;</span><span class="p">,</span><span class="o">&amp;</span><span class="n">x</span><span class="p">);</span>
+    <span class="n">h</span><span class="o">=</span><span class="n">x</span><span class="o">/</span><span class="mi">3600</span><span class="p">;</span>
+    <span class="n">m</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="mi">3600</span><span class="p">))</span><span class="o">/</span><span class="mi">60</span><span class="p">;</span>
+    <span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="n">x</span><span class="o">-</span><span class="p">(</span><span class="n">h</span><span class="o">*</span><span class="mi">3600</span><span class="p">)</span><span class="o">-</span><span class="n">m</span><span class="o">*</span><span class="mi">60</span><span class="p">);</span>
+    <span class="n">cout</span><span class="o">&gt;&gt;</span><span class="n">h</span><span class="o">&gt;&gt;</span><span class="s">&#34;:&#34;</span><span class="o">&gt;&gt;</span><span class="n">m</span><span class="o">&gt;&gt;</span><span class="s">&#34;:&#34;</span><span class="o">&gt;&gt;</span><span class="n">s</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
 </div>
-<pre class="EnlighterJSRAW" data-enlighter-language="cpp" data-enlighter-theme="godzilla">#include&lt;bits/stdc++.h&gt;
-using namespace std;
-int main(){
-    int h, m,s,x;
-    scanf("%d",&x);
-    h=x/3600;
-    m=(x-(h*3600))/60;
-    s=(x-(h*3600)-m*60);
-    cout&lt;&lt;h&lt;&lt;":"&lt;&lt;m&lt;&lt;":"&lt;&lt;s;
-    return 0;
-}</pre>
-<p> </p>
-</div><div id="comments"><div id="commento"></div><noscript>
+</div></div><div id="comments"><div id="commento"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://commento.io/">Commento</a>.
             </noscript></div></div></div>
             </main><footer class="footer">
